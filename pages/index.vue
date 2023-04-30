@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import data from "../public/static/mock/data.json";
+import { ProductInterface } from "~/models";
+
+const data = (await import("~/public/static/mock/data.json"))
+  .default as ProductInterface[];
 </script>
 
 <template>
-  <pre>
-    {{ data }}
-  </pre>
+  <ProductsList :products="data" />
 </template>
