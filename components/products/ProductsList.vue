@@ -11,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <ul>
+  <ul class="sm:flex flex-wrap gap-4 tablet:gap-10 tablet:text-blue">
     <ProductsListItem
       v-for="product in products"
       :key="product.id"

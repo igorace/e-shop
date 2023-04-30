@@ -4,15 +4,21 @@ import { ProductInterface } from "~/models";
 defineProps({
   model: {
     type: Object as PropType<ProductInterface>,
-    default: () => {},
+    required: true,
   },
 });
 </script>
 
 <template>
-  <li>
-    <h1>{{ model.name }}</h1>
-    <img :src="model.img" :alt="model.name" />
+  <li
+    class="shadow rounded-lg p-4 text-center text-lg font-bold text-gray-700 bg-white sm:w-1/3 flex-grow mb-2"
+  >
+    <img :src="model.img" :alt="model.name" width="300" class="mx-auto" />
+
+    <div>
+      {{ model.name }} -
+      <span class="text-green-500">${{ model.price }}</span>
+    </div>
   </li>
 </template>
 
