@@ -1,0 +1,90 @@
+[
+  {
+    "id": "62863b689c1bcb9946a0c8ac",
+    "name": "Bolts",
+    "img": "https://media.gettyimages.com/photos/bolts-and-nuts-picture-id175425827?s=2048x2048",
+    "availableAmount": 1000,
+    "minOrderAmount": 20,
+    "price": 0.2
+  },
+  {
+    "id": "62863b689c1bcb9946a0c8ae",
+    "name": "Screws",
+    "img": "https://media.gettyimages.com/photos/self-tapping-screw-isolated-on-white-background-picture-id1216049122?s=2048x2048",
+    "availableAmount": 1000,
+    "minOrderAmount": 40,
+    "price": 0.1
+  },
+  {
+    "id": "62863b689c1bcb9946a0c8ad",
+    "name": "Screwdrivers",
+    "img": "https://media.gettyimages.com/photos/yellow-and-black-handled-philips-and-slot-screwdriver-picture-id155150739?s=2048x2048",
+    "availableAmount": 500,
+    "minOrderAmount": 1,
+    "price": 3
+  },
+  {
+    "id": "62863b689c1bcb9946a0c8af",
+    "name": "Ladder",
+    "img": "https://media.gettyimages.com/photos/ladder-isolated-on-white-background-picture-id1012045306?s=2048x2048",
+    "availableAmount": 100,
+    "minOrderAmount": 1,
+    "price": 30
+  },
+  {
+    "name": "Orange",
+    "img": "https://media.gettyimages.com/id/185284489/de/foto/orange.jpg?s=2048x2048&w=gi&k=20&c=iPNCJ63MP6H55BGexgP8RE-kk5WGfi36c96368tZaLU=",
+    "minOrderAmount": 1,
+    "availableAmount": 74,
+    "price": 1.5,
+    "id": "1"
+  },
+  {
+    "name": "Apple",
+    "img": "https://media.gettyimages.com/id/184276818/de/foto/roter-apfel.jpg?s=2048x2048&w=gi&k=20&c=WuOBR6zfpb7yuu_wec-ydNxbfV43-SesgPzuVZQyvsE=",
+    "minOrderAmount": 1,
+    "availableAmount": 22,
+    "price": 1,
+    "id": "2"
+  },
+  {
+    "name": "Umbrella",
+    "img": "https://media.gettyimages.com/id/157440095/de/foto/blue-regenschirm-mit-clipping-path.jpg?s=1024x1024&w=gi&k=20&c=teDeVRNOsD_HFlEFXTltOSVf1WzPZdakdPC68MOyDbQ=",
+    "minOrderAmount": 1,
+    "availableAmount": 10,
+    "price": 10,
+    "id": "3"
+  },
+  {
+    "name": "Cherry",
+    "img": "https://media.gettyimages.com/id/182505260/de/foto/cherry-einzelzimmer-mit-blatt.jpg?s=612x612&w=gi&k=20&c=WSZv1JKIX2eeHSwUubfAXJVOnfP7qfECU3IowjHWY1I=",
+    "minOrderAmount": 12,
+    "availableAmount": 89,
+    "price": 0.2,
+    "id": "4"
+  },
+  {
+    "name": "Laptop",
+    "img": "https://media.gettyimages.com/id/1303732236/de/foto/laptop-isolated-mockup-with-white-screen-isolated-on-white-background.jpg?s=2048x2048&w=gi&k=20&c=jcUUnSW2CcoMdVFD1cED-U4eq9oIY5YrRCgMZxf8EU0=",
+    "minOrderAmount": 1,
+    "availableAmount": 79,
+    "price": 1200,
+    "id": "5"
+  },
+  {
+    "name": "Winter jacket",
+    "img": "https://media.gettyimages.com/id/1047319268/de/foto/junge-sch%C3%B6ne-frau-mit-regenjacke-bei-kaltem-wetter.jpg?s=1024x1024&w=gi&k=20&c=p7dfFzJ61twg27kvgqJU6ewuoMHKd-qjuWn3MzC1Q8U=",
+    "minOrderAmount": 1,
+    "availableAmount": 15,
+    "price": 350,
+    "id": "6"
+  },
+  {
+    "name": "Tennis ball",
+    "img": "https://media.gettyimages.com/id/160179174/de/foto/isoliert-gelben-tennisball-auf-wei%C3%9F.jpg?s=612x612&w=gi&k=20&c=YiZs7VLLy-qk06X6uaIrchhsXpmwRAZx0vs7LB8h_Q4=",
+    "minOrderAmount": 4,
+    "availableAmount": 155,
+    "price": 0.6,
+    "id": "7"
+  }
+]
