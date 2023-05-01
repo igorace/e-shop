@@ -1,5 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { items, itemsCount } = useCart();
+</script>
 
 <template>
-  <div></div>
+  <div>Cart Page (items: {{ itemsCount }})</div>
+  <pre>{{ items }}</pre>
 </template>

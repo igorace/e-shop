@@ -22,7 +22,7 @@ const amountToAdd = ref(props.model.minOrderAmount);
   <li
     class="shadow rounded-lg p-4 text-center text-lg font-bold text-gray-700 bg-white flex-grow mb-2"
   >
-    <div class="w-[300px] h-[300px] text-center mx-auto">
+    <div class="w-[200px] h-[200px] text-center mx-auto">
       <img
         :src="model.img"
         :alt="model.name"
@@ -33,8 +33,8 @@ const amountToAdd = ref(props.model.minOrderAmount);
     <div>
       {{ model.name }} -
       <span class="text-green-500">${{ model.price }}</span>
-      <div>Minimum order ammount: {{ model.minOrderAmount }}</div>
-      <div>Available ammount: {{ model.availableAmount }}</div>
+      <div>Minimum order: {{ model.minOrderAmount }}</div>
+      <div>Available: {{ model.availableAmount }}</div>
     </div>
     <ProductsCountInput
       v-model="amountToAdd"
@@ -43,7 +43,7 @@ const amountToAdd = ref(props.model.minOrderAmount);
     />
 
     <button
-      class="rounded-xl p-2 bg-green-500 text-white hover:opacity-80"
+      class="rounded-xl p-2 bg-blue-500 text-white text-sm px-4 hover:opacity-80"
       @click="$emit('addToCart', { product: model, amount: amountToAdd })"
     >
       Add to cart

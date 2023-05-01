@@ -8,6 +8,12 @@ defineProps({
     required: true,
   },
 });
+
+const addToCart = (item: { product: ProductInterface; amount: number }) => {
+  const { addItem, items } = useCart();
+  addItem(item);
+  console.log(items.value);
+};
 </script>
 
 <template>
@@ -16,6 +22,7 @@ defineProps({
       v-for="product in products"
       :key="product.id"
       :model="product"
+      @add-to-cart="addToCart"
     />
   </ul>
 </template>
