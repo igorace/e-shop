@@ -1,4 +1,5 @@
 import { ProductInterface } from "~/types";
+import { useFetch, useState } from "nuxt/app";
 
 export function useProducts() {
   const products = useState<ProductInterface[]>("shop-products", () => []);

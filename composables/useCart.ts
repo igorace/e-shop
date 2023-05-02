@@ -1,4 +1,6 @@
 import { CartItem } from "~/types";
+import { useState } from "nuxt/app";
+import { computed } from "vue";
 
 export function useCart() {
   const items = useState<CartItem[]>("cart-items", () => []);
