@@ -18,6 +18,7 @@ const amountToAdd = ref(props.model.minOrderAmount);
 <template>
   <li
     class="shadow rounded-lg p-4 text-center text-lg text-gray-700 bg-white flex-grow mb-2"
+    data-test="product-item"
   >
     <div class="w-[200px] h-[200px] mx-auto">
       <img
@@ -44,6 +45,7 @@ const amountToAdd = ref(props.model.minOrderAmount);
       class="rounded-xl p-2 bg-blue-500 text-white text-sm px-4 hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-50"
       :disabled="model.availableAmount < model.minOrderAmount"
       @click="$emit('addToCart', { product: model, amount: amountToAdd })"
+      :data-test="`addToCart-${model.id}`"
     >
       Add to cart
     </button>

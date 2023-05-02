@@ -3,12 +3,16 @@ const { items, itemsCount, totalAmount, totalPrice, isEmpty } = useCart();
 </script>
 
 <template>
+  <Head>
+    <Title>My cart</Title>
+    <Meta name="description" content="Cart with all added items" />
+  </Head>
   <NuxtLink
     to="/"
     class="p-2 bg-orange-500 rounded-xl text-white hover:opacity-80"
     >Go back</NuxtLink
   >
-  <h1 class="text-2xl font-bold mt-4">Your Cart:</h1>
+  <h1 class="text-2xl font-bold mt-4">My cart:</h1>
   <template v-if="!isEmpty">
     <ul class="p-8">
       <li
