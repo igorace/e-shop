@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { ProductInterface } from "~/models";
-
-const data = (await import("~/public/static/mock/data.json"))
-  .default as ProductInterface[];
+const { products, fetchProducts } = useProducts();
+await fetchProducts();
 
 const { itemsCount } = useCart();
 </script>
 
 <template>
-  <NuxtLink to="cart">Go to cart (items: {{ itemsCount }})</NuxtLink>
-  <ProductsList :products="data" />
+  <NuxtLink
+    to="cart"
+    class="p-2 bg-orange-500 rounded-xl text-white hover:opacity-80"
+    >My cart (items: {{ itemsCount }})</NuxtLink
+  >
+  <ProductsList :products="products" class="mt-8" />
 </template>

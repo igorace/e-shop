@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ProductInterface } from "~/models";
+import { CartItem, ProductInterface } from "~/types";
 
 const props = defineProps({
   model: {
@@ -9,10 +9,7 @@ const props = defineProps({
 });
 
 const emit = defineEmits<{
-  (
-    e: "addToCart",
-    payload: { product: ProductInterface; amount: number }
-  ): void;
+  (e: "addToCart", payload: CartItem): void;
 }>();
 
 const amountToAdd = ref(props.model.minOrderAmount);
@@ -20,9 +17,9 @@ const amountToAdd = ref(props.model.minOrderAmount);
 
 <template>
   <li
-    class="shadow rounded-lg p-4 text-center text-lg font-bold text-gray-700 bg-white flex-grow mb-2"
+    class="shadow rounded-lg p-4 text-center text-lg text-gray-700 bg-white flex-grow mb-2"
   >
-    <div class="w-[200px] h-[200px] text-center mx-auto">
+    <div class="w-[200px] h-[200px] mx-auto">
       <img
         :src="model.img"
         :alt="model.name"
@@ -32,7 +29,7 @@ const amountToAdd = ref(props.model.minOrderAmount);
 
     <div>
       {{ model.name }} -
-      <span class="text-green-500">${{ model.price }}</span>
+      <span class="text-blue-500">${{ model.price }}</span>
       <div>Minimum order: {{ model.minOrderAmount }}</div>
       <div>Available: {{ model.availableAmount }}</div>
     </div>
@@ -40,10 +37,12 @@ const amountToAdd = ref(props.model.minOrderAmount);
       v-model="amountToAdd"
       :min-value="model.minOrderAmount"
       :max-value="model.availableAmount"
+      class="my-2"
     />
 
     <button
-      class="rounded-xl p-2 bg-blue-500 text-white text-sm px-4 hover:opacity-80"
+      class="rounded-xl p-2 bg-blue-500 text-white text-sm px-4 hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-50"
+      :disabled="model.availableAmount < model.minOrderAmount"
       @click="$emit('addToCart', { product: model, amount: amountToAdd })"
     >
       Add to cart

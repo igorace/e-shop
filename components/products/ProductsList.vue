@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { PropType } from "nuxt/dist/app/compat/capi";
-import { ProductInterface } from "~/models";
+import { CartItem, ProductInterface } from "~/types";
 
 defineProps({
   products: {
@@ -9,10 +8,11 @@ defineProps({
   },
 });
 
-const addToCart = (item: { product: ProductInterface; amount: number }) => {
-  const { addItem, items } = useCart();
+const addToCart = (item: CartItem) => {
+  const { addItem } = useCart();
+  const { updateProductCount } = useProducts();
   addItem(item);
-  console.log(items.value);
+  updateProductCount(item.product.id, -item.amount);
 };
 </script>
 

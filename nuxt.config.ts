@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
 
   devtools: {
-    enabled: true
-  }
+    enabled: true,
+  },
+
+  routeRules: {
+    "/*": { cors: true },
+  },
 });
