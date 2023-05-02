@@ -1,5 +1,7 @@
 # Nuxt 3 E-commerce shop
 
+Demo: [E-shop](https://majestic-malasada-a5e728.netlify.app/)
+
 ## Setup
 
 Make sure to install the dependencies:
